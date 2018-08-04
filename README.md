@@ -5,7 +5,7 @@ A code for GraphQL-Sangria Tutorial. Visit [HowtoGraphql.com](http://howtographq
 ### Running the example
 
 ```bash
-sbt ~reStart
+sbt run
 ```
 
 SBT will automatically compile and restart the server whenever the source code changes.
