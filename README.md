@@ -1,6 +1,6 @@
-## HowToGraph - GraphQL with Sangria Tutorial codebase
+## HowToGraph - GraphQL with Sangria and Neo4j Tutorial codebase
 
-A code for GraphQL-Sangria Tutorial. Visit [HowtoGraphql.com](http://howtographql.com) to learn more.  
+A code for GraphQL-Sangria Tutorial. Visit [GraphQL Scala Tutorial](https://www.howtographql.com/graphql-scala/0-introduction/) to learn more. This project is an extension of the tutorial with Neo4j implemented
 
 ### Running the example
 
@@ -16,6 +16,8 @@ Use different PORT if you've changed it int he configuration.
 
 ### Database Configuration
 
-This example uses an in-memory [H2](http://www.h2database.com/html/main.html) SQL database. The schema and example data will be re-created every time server starts.
+This example uses Neo4j [Neo4j](https://neo4j.com/) Graph database. The schema and example data will be deleted and re-created every time server starts.
+
+For installing Neo4j [installation doc](https://neo4j.com/docs/operations-manual/current/installation/) is a great resource.
 
 If you would like to change the database configuration or use a different database, then please update `src/main/resources/application.conf`.
