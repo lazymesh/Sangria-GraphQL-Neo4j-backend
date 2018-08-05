@@ -24,7 +24,7 @@ If you would like to change the database configuration or use a different databa
 
 Some of the queries you can perform on Graphiql 
 
-# queries
+#### queries
 ```bash
 query {
   allLinks {
@@ -71,7 +71,7 @@ query {
 }
 ```
 
-# mutations
+#### mutations
 ```bash
 mutation addMe {
   createUser(
