@@ -1,6 +1,6 @@
 ## HowToGraph - GraphQL with Sangria and Neo4j Tutorial codebase
 
-A code for GraphQL-Sangria Tutorial. Visit [GraphQL Scala Tutorial](https://www.howtographql.com/graphql-scala/0-introduction/) to learn more. This project is an extension of the tutorial with Neo4j implemented
+A code for GraphQL-Sangria Tutorial. Visit [GraphQL Scala Tutorial](https://www.howtographql.com/graphql-scala/0-introduction/) by Mariusz Nosiński to learn more. This project is an extension of the tutorial with Neo4j implemented
 
 ### Running the example
 
@@ -21,3 +21,76 @@ This example uses Neo4j [Neo4j](https://neo4j.com/) Graph database. The schema a
 For installing Neo4j [installation doc](https://neo4j.com/docs/operations-manual/current/installation/) is a great resource.
 
 If you would like to change the database configuration or use a different database, then please update `src/main/resources/application.conf`.
+
+Some of the queries you can perform on Graphiql 
+
+#queries
+`query {
+  allLinks {
+    id
+    name
+    description
+  }
+}`
+
+`query {
+  allUsers {
+    id
+    name
+    email
+    createdAt
+  }
+}`
+
+`query {
+  allVotes {
+    id
+    userId
+    linkId
+    createdAt
+  }
+}`
+
+`query {
+  link(id: 1){
+    id
+    url
+    createdAt
+    postedBy {
+      name
+      links {
+        id
+        url
+      }
+    }
+  }
+}`
+
+#mutations
+`mutation addMe {
+  createUser(
+    name: "Mario",
+    authProvider:{
+      email:{
+        email:"mario@example.com",
+        password:"p4ssw0rd"
+      }
+    }){
+    id
+    name
+  }
+}`
+
+`mutation addLink {
+  createLink(
+    url: "howtographql.com",
+    description: "Great tutorial page",
+    postedById: 1
+  ){
+    url
+    description
+    postedBy{
+      name
+    }
+  }
+}`
