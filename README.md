@@ -22,7 +22,7 @@ For installing Neo4j [installation doc](https://neo4j.com/docs/operations-manual
 
 If you would like to change the database configuration or use a different database, then please update `src/main/resources/application.conf`.
 
-Some of the queries you can perform on Graphiql 
+Some of the queries and mutations examples you can perform on Graphiql 
 
 #### queries
 ```bash
