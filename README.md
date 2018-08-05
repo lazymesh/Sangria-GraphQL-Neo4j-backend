@@ -24,34 +24,38 @@ If you would like to change the database configuration or use a different databa
 
 Some of the queries you can perform on Graphiql 
 
-#queries
-`query {
+# queries
+```bash
+query {
   allLinks {
     id
     name
     description
   }
-}`
-
-`query {
+}
+```
+```bash
+query {
   allUsers {
     id
     name
     email
     createdAt
   }
-}`
-
-`query {
+}
+```
+```bash
+query {
   allVotes {
     id
     userId
     linkId
     createdAt
   }
-}`
-
-`query {
+}
+```
+```bash
+query {
   link(id: 1){
     id
     url
@@ -64,10 +68,12 @@ Some of the queries you can perform on Graphiql
       }
     }
   }
-}`
+}
+```
 
-#mutations
-`mutation addMe {
+# mutations
+```bash
+mutation addMe {
   createUser(
     name: "Mario",
     authProvider:{
@@ -79,9 +85,10 @@ Some of the queries you can perform on Graphiql
     id
     name
   }
-}`
-
-`mutation addLink {
+}
+```
+```bash
+mutation addLink {
   createLink(
     url: "howtographql.com",
     description: "Great tutorial page",
@@ -93,4 +100,5 @@ Some of the queries you can perform on Graphiql
       name
     }
   }
-}`
+}
+```
